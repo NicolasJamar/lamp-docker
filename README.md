@@ -3,7 +3,7 @@
 This is a little Lamp stack with Docker. 
 
 
-## The environement
+## The environment
 
 Have a look at this folder. You have these files and folders :
 - docker-compose.yml
@@ -37,7 +37,7 @@ The details for all your services is detailed bellow.
 
 ## Your services
 
-### Langage: PHP 🐘
+### Langage: PHP 8.1 🐘
 
 #### What is PHP?
 
@@ -48,7 +48,7 @@ PHP is a server-side scripting language designed for web development, but which 
 
 #### Container
 
-* **Image used:** [library/php:apache](https://hub.docker.com/_/php/)
+* **Image used:** [library/php:8.1-apache](https://hub.docker.com/_/php/)
 
 ##### Usage
 
