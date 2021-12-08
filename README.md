@@ -1,6 +1,6 @@
 # Lamp-docker
 
-This is a little lamp stack with Docker. 
+This is a little Lamp stack with Docker. 
 
 
 ## The environement
@@ -21,7 +21,7 @@ The `conf` directory contains files to configure your Apache server (`apache.con
 For working, you can paste this repo in your computer, rename it as you want and follow the instructions below. 
 
 
-## Run `docker`
+## Run `docker`🐳
 
 When starting your env for the first time, run the following command in your repo:
 
@@ -37,7 +37,7 @@ The details for all your services is detailed bellow.
 
 ## Your services
 
-### Langage: PHP
+### Langage: PHP 🐘
 
 #### What is PHP?
 
@@ -57,7 +57,7 @@ Place your PHP files in `./www` folder, access it with your browser at address [
 
 * * *
 
-### Database: MariaDB
+### Database: MariaDB 🦭
 
 #### What is MariaDB?
 
@@ -99,7 +99,7 @@ You can access the database  **from you host** with the following informations:
 
 * * *
 
-### Tool: phpMyAdmin
+### Tool: phpMyAdmin 
 
 #### What is phpMyAdmin?
 
@@ -119,7 +119,7 @@ Access **phpMyAdmin** with your browser at address [localhost:8001](http://local
 
 ***
 
-### Tool: MailHog
+### Tool: MailHog 📨
 
 #### What is MailHog?
 
