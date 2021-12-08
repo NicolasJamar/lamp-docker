@@ -16,7 +16,7 @@ The `docker-compose.yml` and `Dockerfile` are the configurations file in order t
 
 The `www` folder is your work environment folder where you will code your PHP files. There is already a `index.php` in it. 
 
-The `conf` directory contains files to configure your Apache server or PHP.
+The `conf` directory contains files to configure your Apache server (`apache.conf`, `vhost.conf`) or PHP (`php.ini`).
 
 For working, you can paste this repo in your computer, rename it as you want and follow the instructions below. 
 
