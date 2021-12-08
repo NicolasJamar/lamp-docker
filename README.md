@@ -99,7 +99,7 @@ You can access the database  **from you host** with the following informations:
 
 * * *
 
-### Tool: phpMyAdmin 
+### Tool: phpMyAdmin 🗂️
 
 #### What is phpMyAdmin?
 
