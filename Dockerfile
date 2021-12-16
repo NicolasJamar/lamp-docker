@@ -11,6 +11,13 @@ RUN curl -LkSso /usr/bin/mhsendmail 'https://github.com/mailhog/mhsendmail/relea
 #Config PHP
 COPY conf/php.ini /usr/local/etc/php/php.ini
 
+#Config XDebug
+COPY conf/xdebug.ini /usr/local/etc/php/xdebug.ini
+COPY conf/error_reporting.ini /usr/local/etc/php/error_reporting.ini
+
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
 #Config Apache
 COPY conf/vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY conf/apache.conf /etc/apache2/conf-available/z-src.conf
