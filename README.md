@@ -138,3 +138,34 @@ MailHog is an email testing tool which allows you to install & configure an e-ma
 Access **MailHog's web interface** with your browser at address [localhost:8025](http://localhost:8025).
 
 Access **MailHog's SMTP interface** on port `1025`. 
+
+***
+
+### (optional) Tool: composer 
+
+#### What is composer ? 
+
+Composer is a package manager for PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. It's the *npm* for PHP. 
+You can check on packagist.org to download a composer's package. 
+
+* **Website:** [getcomposer.org](https://getcomposer.org/doc/00-intro.md)
+* **Packagist:** [packagist.org](https://packagist.org/)
+
+#### Installation
+
+Add these lines in the Dockerfile right after the installation of Apache.
+
+```
+# Install composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN composer --version
+```
+
+#### Usage
+
+You can access to composer from the Apache server. 
+To access to the Apache server : `docker exec -it container-id sh`
+
+To check if composer is installed : `composer --version`
+
