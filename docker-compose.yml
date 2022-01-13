@@ -16,7 +16,7 @@
         - "3306:3306"
         - "33060:33060"
       environment: 
-        MARIADB_ROOT_PASSWORD: "${MARIADB_ROOT_PASSWORD}"
+        MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
     phpmyadmin: 
       image: "phpmyadmin/phpmyadmin"
       ports: 
