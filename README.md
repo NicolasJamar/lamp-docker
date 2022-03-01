@@ -54,6 +54,11 @@ PHP is a server-side scripting language designed for web development, but which 
 
 Place your PHP files in `./www` folder, access it with your browser at address [localhost](http://localhost).
 
+##### PHP extensions
+
+If you need to install some PHP extensions, you can add & configure them in the `Dockerfile`. 
+For infos, I recommend to follow the instructions on the Docker image for PHP : https://hub.docker.com/_/php
+
 
 * * *
 
