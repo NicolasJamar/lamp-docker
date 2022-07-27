@@ -124,29 +124,7 @@ Access **phpMyAdmin** with your browser at address [localhost:8001](http://local
 
 ***
 
-### Tool: MailHog 📨
-
-#### What is MailHog?
-
-MailHog is an email testing tool which allows you to install & configure an e-mail server locally.
-
-* **Website:** [github.com/mailhog/MailHog](https://github.com/mailhog/MailHog)
-* **Explanations:** [mailtrap.io's blog](https://mailtrap.io/blog/mailhog-explained/)
-* **More explainations:** [kinsta's blog](https://kinsta.com/blog/mailhog/)
-
-#### Container
-
-* **Image used:** [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog/)
-
-##### Usage
-
-Access **MailHog's web interface** with your browser at address [localhost:8025](http://localhost:8025).
-
-Access **MailHog's SMTP interface** on port `1025`. 
-
-***
-
-### (optional) Tool: composer 
+### (optional) Tool: composer 🎼
 
 #### What is composer ? 
 
@@ -174,3 +152,47 @@ To access to the Apache server : `docker exec -it container-id sh`
 
 To check if composer is installed : `composer --version`
 
+***
+
+### (optional) Tool: MailHog 📨
+
+#### What is MailHog?
+
+MailHog is an email testing tool which allows you to install & configure an e-mail server locally.
+
+* **Website:** [github.com/mailhog/MailHog](https://github.com/mailhog/MailHog)
+* **Explanations:** [mailtrap.io's blog](https://mailtrap.io/blog/mailhog-explained/)
+* **More explainations:** [kinsta's blog](https://kinsta.com/blog/mailhog/)
+
+#### Installation
+
+In the `docker-compose.yml` file, add these lines: 
+```
+mail:
+  image: "mailhog/mailhog:latest"
+  restart: "always"
+  ports:
+    - "1025:1025"
+    - "8025:8025"
+```
+
+In the `Dockerfile`, uncomment these lines : 
+```
+#RUN curl -LkSso /usr/bin/mhsendmail 'https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64'&& \
+#   chmod 0755 /usr/bin/mhsendmail
+```
+
+In the `conf/php.ini` file, you have to uncomment this line : 
+```
+# sendmail_path = "/usr/bin/mhsendmail --smtp-addr=mail:1025"
+```
+
+#### Container
+
+* **Image used:** [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog/)
+
+##### Usage
+
+Access **MailHog's web interface** with your browser at address [localhost:8025](http://localhost:8025).
+
+Access **MailHog's SMTP interface** on port `1025`. 

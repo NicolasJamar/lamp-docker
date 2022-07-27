@@ -27,11 +27,5 @@
         PMA_HOST: "${PMA_HOST}"
         PMA_USER: "${PMA_USER}"
         PMA_PASSWORD: "${PMA_PASSWORD}"
-    mail:
-      image: "mailhog/mailhog:latest"
-      restart: "always"
-      ports:
-        - "1025:1025"
-        - "8025:8025"
   volumes: 
     mysql_db: 
